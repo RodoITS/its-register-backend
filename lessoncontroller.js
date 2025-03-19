@@ -108,8 +108,52 @@ function initLessonRoutes(app) {
     })
 
     app.post('/generatelessons', jsonParser, auth.authenticateToken, async (req, res) => {
-     
-    })
+        let requestbody = req.body;
+        let currentDate = new Date(requestbody.startdate);
+        let endDate = new Date(requestbody.enddate);
+        let lessonsCreated = [];
+    
+        while (currentDate <= endDate) {
+            if (currentDate.getDay() == requestbody.day) {
+                let newDate = new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth(),
+                    currentDate.getDate(),
+                    requestbody.starthour,
+                    requestbody.startminute
+                );
+                let lessonEnd = new Date(
+                    currentDate.getFullYear(),
+                    currentDate.getMonth(),
+                    currentDate.getDate(),
+                    requestbody.endhour,
+                    requestbody.endminute
+                );
+    
+                try {
+                    let validation = await con.query('select id from modules where id = ?', [requestbody.id_module]);
+                    if (validation[0].length < 1) {
+                        res.json({ error: true, errormessage: "INVALID_MODULE_ID" });
+                        return;
+                    }   
+                    validation = await con.query(`select id from lessons where id_module = ? and ? between startdate and enddate
+                        or ? between startdate and enddate)`,[requestbody.id_module, newDate, lessonEnd, newDate, lessonEnd]);
+                    if (validation[0].length < 1) {
+                        const [data] = await con.execute(`insert into lessons (startdate,enddate,id_module) values (?,?,?)`,[newDate, lessonEnd, requestbody.id_module]);
+                        lessonsCreated.push(data);
+                    } else {
+                        res.json({ error: true, errormessage: "LESSON_EXISTS" });
+                        return;
+                    }
+                } catch (err) {
+                    console.log("Generatelesson Error: " + err);
+                    res.json({ error: true, errormessage: "GENERIC_ERROR" });
+                    return;
+                }
+            }
+            currentDate = addDays(currentDate, 1);
+        }
+    });    
 
     app.post('/signpresence', jsonParser, auth.authenticateToken, async (req, res) => {
         let requestbody = req.body;

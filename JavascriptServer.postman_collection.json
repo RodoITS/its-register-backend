@@ -1,0 +1,900 @@
+{
+	"info": {
+		"_postman_id": "79c9f48c-a0ee-4de3-83ec-9deca2e26ba4",
+		"name": "JavascriptServer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9366808"
+	},
+	"item": [
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getallusers?pagenumber=1&pagesize=20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getallusers"
+					],
+					"query": [
+						{
+							"key": "pagenumber",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getuser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllCourses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getallcourses?pagenumber=1&pagesize=20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getallcourses"
+					],
+					"query": [
+						{
+							"key": "pagenumber",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllModules",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getallmodules?pagenumber=1&pagesize=20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getallmodules"
+					],
+					"query": [
+						{
+							"key": "pagenumber",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllLessons",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getalllessons?pagenumber=1&pagesize=20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getalllessons"
+					],
+					"query": [
+						{
+							"key": "pagenumber",
+							"value": "1"
+						},
+						{
+							"key": "pagesize",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserCourses",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getusercourses",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getusercourses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserModules",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/getusermodules",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getusermodules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userid\": \"pippo\",\r\n    \"pwd\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/Register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"Register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"angelo.rushan@its.it\",\r\n    \"pwd\": \"test1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"Test1234\",\r\n    \"lastname\": \"test\",\r\n    \"firstname\": \"test\",\r\n    \"phone\": \"111\",\r\n    \"email\": \"test@its.it\",\r\n    \"fiscalcode\": \"tetet01D5411\",\r\n    \"active\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createuser",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ITC 27-29\",\r\n    \"year\": 2027,\r\n    \"period\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createcourse",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createcourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateModule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Altro\",\r\n    \"total_hours\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createmodule",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createmodule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateLesson",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"startdate\": \"2025-03-14 13:00\",\r\n        \"enddate\": \"2025-03-14 17:00\",\r\n        \"argument\": \"Node js\",\r\n        \"note\": null,\r\n        \"id_module\": 4\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createlesson",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createlesson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateEvents",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startdate\": \"2025-03-01\",\r\n    \"enddate\": \"2025-03-31\",\r\n    \"day\": 1,\r\n    \"id_module\": 4,\r\n    \"starthour\": 14,\r\n    \"startminute\": 0,\r\n    \"endhour\": 18,\r\n    \"endminute\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/generatelessons",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"generatelessons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/deleteuser/20",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deleteuser",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/deletecourse/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deletecourse",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteModule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/deletemodule/8",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"deletemodule",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastname\": \"222\",\r\n    \"firstname\": \"222\",\r\n    \"phone\": \"222\",\r\n    \"fiscalcode\": \"222\",\r\n    \"active\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updateuser/18",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateuser",
+						"18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ITC 29\",\r\n    \"year\": 2024,\r\n    \"period\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updatecourse/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updatecourse",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateModule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Fondamenti di Programmazione\",\r\n    \"total_hours\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updatemodule/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updatemodule",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePwd",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"222\",\r\n    \"password\": \"Test@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/updatepwd",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updatepwd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LinkCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\": 17,\r\n    \"id_course\": 1,\r\n    \"id_role\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/linkcourse",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"linkcourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LinkModule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\": 17,\r\n    \"id_module\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/linkmodule",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"linkmodule"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnLinkCourse",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\": 17,\r\n    \"id_course\": 1,\r\n    \"id_role\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/unlinkcourse",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unlinkcourse"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UnLinkModule",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\": 17,\r\n    \"id_module\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/unlinkmodule",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"unlinkmodule"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFuZ2Vsby5ydXNoYW5AaXRzLml0IiwiaWF0IjoxNzQxMjYwNzI4LCJleHAiOjE3NDEyNjI1Mjh9.tOCPFvWX3U38_Xt5v0CfEKLGOetV4QdbK51mKga15hs",
+			"type": "string"
+		}
+	]
+}
